@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Basic Financial Calculator</title>
+		<!--
+			<link rel="stylesheet" href="styles.css"/>
+		-->
+		<style>
+			:root {
+			--color-white: #f3f3f3;
+			--color-darkblue: #08084e;
+			--color-darkblue-alpha: rgba(5, 3, 102, 0.8);
+			--color-green: #37af65;
+		}
+
+		*,
+		*::before,
+		*::after {
+		box-sizing: border-box;
+		}
+
+		body {
+			font-family: 'Poppins', sans-serif;
+			font-size: 1rem;
+			font-weight: 400;
+			line-height: 1.4;
+			color: var(--color-white);
+			margin: 0;
+		}
+
+		h1 {
+			font-weight: bold;
+			line-height: 1.2;
+		}
+
+		p {
+			font-size: 1.125rem;
+		}
+
+		h1, p {
+			margin-top: 15px;
+			margin-bottom: 0.5rem;
+		}
+
+		.header {
+			padding: 0 0.625rem;
+			margin-bottom: 1.875rem;
+			color: #1b1b32;
+		}
+
+		.description {
+			font-style: italic;
+			font-weight: 200;
+			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+		}
+
+		span {
+			
+			align-content: center;
+			text-align: center;
+			margin: 2px;
+			width: 50%;
+			padding: 1px;
+		}
+
+		.text-center {
+			text-align: center;
+			
+		}
+		.statement{
+			background-color: #0b0b16;
+			display: block;
+			margin: auto;
+			border-color: #0d0dbb;
+			width: auto;
+			align-self: center;
+			font-size: large;
+			max-width: 80%;
+			text-align: justify;
+			border-radius: 1rem;
+			padding: 50px;
+			border-bottom: 5px;
+		}
+	</style>
+	</head>
+		<body>
+		<div class="container">
+			<header class="header">
+				<h1 id="title" class="text-center">Basic Financial Calculator</h1>
+				<p id="description" class="description text-center">This is the most favorite Personal Finance Calculator. Please provide the following details to generate your Financial Statement</p>
+			</header>
+			<div name="statement" 
+			class="statement">
+				<h2 class="text-center">My Financial Statement</h2>
+				<br>
+				<br>
+				<p>Hello {{user_name}},</p>
+				<br>
+				<p>The total dollar value of assets you own is ${{total_value_of_assets}} and the total dollar value of your debt is currently ${{total_debt}}; therefore, your current net worth is: ${{total_net_worth}}.</p>
+				<br>
+				<p>Your total bills due are ${{total_value_of_assets}}. Once you make these payments, you will have ${{checking_balance_after_payment}} left in your checking account, and ${{total_remaining_money}} in your bank accounts overall. Additionally, your total credit card debt will be down to ${{credit_card_debt_after_paying_balance_due}} and your loan debt will be down to ${{loan_debt_after_paying_amount}} (including interest applied on the remaining balance after your payment). Therefore, your total debt will then be paid down to ${{total_debt_after_payments}} and your net worth will be ${{networth_after_payments}}.</p>
+				<br>
+				<p>If you instead choose not to pay off your full credit card balance due (${{credit_card_balance_due}}) and only pay the minimum payment due , (${{credit_card_minimum_payment_due}}) you will have ${{value_remaining_checking_after}} left in your checking account, and ${{total_remaining_money}} in your bank accounts overall. However, you will accrue ${{interest_accrued_on_credit_card}} in interest. Your total credit card debt will then be ${{total_credit_debt_after_min_payment}}. In this case, your total debt would instead be ${{total_debt_after_payments}} and your net worth will be ${{networth_after_payments_specified}}</p>
+				<span>{{statement}}</span>
+			</div>
+		
+		</div>
+	</body>
+</html>

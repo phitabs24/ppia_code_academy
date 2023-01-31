@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Finance Calculator</title>
+		<link rel="stylesheet" href="styles.css"/>
+		<style>
+				:root {
+				--color-white: #f3f3f3;
+				--color-darkblue: #08084e;
+				--color-darkblue-alpha: rgba(5, 3, 102, 0.8);
+				--color-green: #37af65;
+			}
+
+			*,
+			*::before,
+			*::after {
+			box-sizing: border-box;
+			}
+
+			body {
+				font-family: 'Poppins', sans-serif;
+				font-size: 1rem;
+				font-weight: 400;
+				line-height: 1.4;
+				color: var(--color-white);
+				margin: 0;
+			}
+
+			h1 {
+				font-weight: bold;
+				line-height: 1.2;
+			}
+
+			p {
+				font-size: 1.125rem;
+			}
+
+			h1, p {
+				margin-top: 15px;
+				margin-bottom: 0.5rem;
+			}
+
+			label {
+				display: flex;
+				align-items: center;
+				font-size: 1.125rem;
+				margin-bottom: 0.5rem;
+			}
+
+			.header {
+				padding: 0 0.625rem;
+				margin-bottom: 1.875rem;
+				color: #1b1b32;
+			}
+
+			.description {
+				font-style: italic;
+				font-weight: 200;
+				text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+			}
+
+			input {
+				display: block;
+				width: 100%;
+				height: 25px;
+				padding: 0.5px;
+				margin: 2px;
+			}
+
+			span {
+				
+				align-content: center;
+				text-align: center;
+				margin: 2px;
+				width: 50%;
+				padding: 1px;
+			}
+
+			form {
+				background: var(--color-darkblue-alpha);
+				padding: 2.5rem 0.625rem;
+				border-radius: 0.25rem;
+				margin: auto;
+				width: 80%;
+
+			}
+
+			.form-group {
+				margin: 0 auto 2.5rem auto;
+				padding: 0.25rem;
+			}
+			
+			.form-control {
+				font-weight: bold;
+				display: block;
+				width: 100%;
+				height: 2.375rem;
+				padding: 0.375rem 0.75rem;
+				color: #000000;
+				background-color: #fff;
+				background-clip: padding-box;
+				border: 1px solid #ced4da;
+				border-radius: 0.25rem;
+				transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+			}
+			
+			.text-center {
+				text-align: center;
+				width: 90%;
+				margin-top: 15px;
+				margin-left: auto;
+				margin-right: auto;
+				
+			}
+			.statement{
+				background-color: #0b0b16;
+				display: block;
+				margin: auto;
+				border-color: #0d0dbb;
+				width: auto;
+				align-self: center;
+				font-size: large;
+				max-width: 80%;
+				text-align: justify;
+				border-radius: 1rem;
+				padding: 50px;
+				border-bottom: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<header class="header">
+				<h1 id="title" class="text-center">Basic Financial Calculator</h1>
+				<p id="description" class="description text-center">This is the most favorite Personal Finance Calculator. Please provide the following details to generate your Financial Statement</p>
+			</header>
+			<form method="post" action="/" class="form-group">
+				<fieldset>
+					<label for="one">Full Names: <input type="text" id="one" required placeholder="Enter your name" name="one" /></label>
+					<br>
+					<label for="two">Checking Account Balance($): <input type="number" step="any" id="two" required placeholder="checking account balance" name="two" /></label>
+					<br>
+					<label for="three">Saving's account balance($): <input type="number" step="any" id="three" required placeholder="Saving's account balance" name="three" /></label>
+					<br>
+					<label for="four">Investment account value($): <input type="number" step="any" id="four" required name="four" placeholder="Investment account value"/></label>
+					<br>
+					<label for="five">Total utility bills($): <input type="number" step="any" required id="five" name="five" placeholder="Total utility bills" /></label>
+					<br>
+					<label for="six">Total credit card debt($): <input type="number" step="any" id="six" required placeholder="Total credit card debt" name="six" /></label>
+					<br>
+					<label for="seven">Credit card balance due($): <input type="number" step="any" id="seven" required placeholder="Credit card balance due" name="seven" /></label>
+					<br>
+					<label for="eight">Credit card minimum payment due($): <input type="number" step="any" id="eight" required placeholder="Credit card minimum payment due" name="eight" /></label>
+					<br>
+					<label for="nine">Annual credit card interest rate(%): <input type="number" step="any" id="nine" required name="nine" placeholder="Annual credit card interest rate"/></label>
+					<br>
+					<label for="ten">Loan debt($): <input type="number" step="any" required id="ten" placeholder="Loan debt" name="ten" /></label>
+					<br>
+					<label for="eleven">Loan payment due($): <input type="number" step="any" id="eleven" required placeholder="Loan payment due" name="eleven" /></label>
+					<br>
+					<label for="twelve">Annual loan interest rate(%): <input type="number" step="any" id="twelve" required name="twelve" placeholder="Annual loan interest rate"/></label>
+					<br>
+					<label for="thirteen">Other asset value($): <input type="number" step="any" required id="thirteen" placeholder="Other asset value" name="thirteen" /></label>
+					
+					<input type="submit" value="Generate" name="fourteen" class="form-control" />
+					
+				</fieldset>
+				
+
+			</form>
+		</div>
+	</body>
+</html>
